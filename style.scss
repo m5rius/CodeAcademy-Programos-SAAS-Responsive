@@ -1,0 +1,283 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+$screen-xl: 1000px;
+$screen-l: 850px;
+$screen-m: 700px;
+
+*{
+    margin: 0;
+    padding: 0;font-family: 'Roboto', sans-serif;
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+
+body{
+    background-color: rgb(224, 224, 224);
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 100%;
+    background-color: white;
+    overflow: hidden;
+    position:fixed;
+    box-shadow: 0 7px 15px 0 rgba(0,0,0,.07);
+    z-index:1;
+
+    a{
+        color: black;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .header-wrap{
+        display: flex;
+        justify-content: space-between;
+        max-width: 1230px;
+        margin: 0 auto;
+        padding: 0 30px;
+        width: 100%;
+
+        .logo{
+            height: 35px;
+            width: 115;
+        }
+
+        .header-block{
+            display: flex;
+            justify-content: center;
+
+            .menu{
+                display: flex;
+                flex-wrap: wrap;
+                list-style-type: none;
+                column-gap: 25px;
+                justify-content: center;
+                align-items: center;
+                margin-left: 120px;
+
+                .button{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: #1200ff;
+                    border-radius: 100px;
+                    color: white;
+                    font-size: 10px;
+                    font-weight: 700;
+                    transition: 0.3s;
+                    padding: 12px 34px;
+                    letter-spacing: 1px;
+                }
+                .button:hover{
+                    background-color: #3829ff;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+}
+.main-wrap{
+    max-width: 1230px;
+    margin: 0 auto;
+    padding: 0 30px;
+    width: 100%;
+
+    .heading{
+        padding-top: 150px;
+        margin-bottom: 20px;
+        font-size: 35px;
+    }
+
+    h2{
+        font-size: 24px;
+    }
+    p{
+        font-size: 16px;
+        color: rgba(0, 0, 0, 0.664);
+        line-height: 1.6;
+    }
+
+    .top-box{
+        a{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .top-box-text{
+            display: flex;
+            gap: 10px;
+
+            // NEVEIKIA
+            @media (max-width: $screen-l) {
+                flex-direction: column;
+            }
+
+            .span-purple,
+            .span-black{
+                font-size: 24px;
+                font-weight: 900;
+            }
+            .span-purple{
+                color: #ff00e9;
+            }
+            .span-black{
+                color: black;
+            }
+        }
+
+        .bg-image{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            background-image: url(./images/Mobile_banner.jpg);
+            margin-bottom: 30px;  color: black;  text-decoration: none;
+            font-weight: 700;
+            font-size: 26px;
+            padding: 31px 45px;
+            background-repeat: no-repeat;
+            background-position: 80% 70%;
+            background-size: 40%;
+        }
+    }
+
+    .main-box{
+        display: flex;
+        flex-wrap: wrap;
+
+        .item-block-content{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 40px 40px 25px;
+            background-color: white;
+            height: 100%;
+            color: black;
+            text-decoration: none;
+            position: relative;
+
+            .form-control {  
+                display: flex;  flex-direction: column;
+            }
+
+            fieldset {  
+                padding: 0;
+                margin: 0;
+                border: none;
+
+                .form-control{
+                    flex-direction: row;
+                }
+
+                label, legend {
+                    font-size: 14px;  font-weight: 400;
+                }
+            }
+
+            .button-transparent{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: white;
+                border-radius: 100px;
+                border: solid 1px #1200ff;
+                color: #1200ff;
+                font-size: 10px;
+                font-weight: 700;
+                transition: 0.3s;
+                padding: 12px 34px;
+                letter-spacing: 1px;
+            }
+            .button-transparent:hover{
+                border: solid 1px #1100ff86;
+                color: #1100ff86;
+                cursor: pointer;
+            }
+        }
+
+        .left-side{
+            display: block;
+            width: 30%;
+            margin-bottom: 30px;
+
+            @media (max-width: $screen-l) {
+                width: 40%;
+            }
+
+            @media (max-width: $screen-m) {
+                width: 100%;
+                padding-left: 0px;
+            }
+
+            .item-block-left{
+                position: sticky;
+                top: 100px;
+            }
+        }
+
+        .right-side{
+            display: block;
+            width: 70%;
+            padding-left: 30px;
+
+            @media (max-width: $screen-l) {
+                width: 60%;
+            }
+
+            @media (max-width: $screen-m) {
+                width: 100%;
+                padding-left: 0px;
+            }
+
+            .right-side-inner{
+                display: flex;
+                flex-wrap: wrap;
+                margin-left: -15px;
+                margin-right: -15px;
+
+                .item-block-right{
+                    width: 50%;
+                    margin-bottom: 30px;
+                    padding-left: 15px;
+                    padding-right: 15px;
+
+                    @media (max-width: $screen-xl) {
+                        width: 100%;
+                    }
+
+                    .item-box-bottom-info{
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 20px;
+                        letter-spacing: 1px;
+                        font-size: 12px;
+                        font-weight: 700;
+                        margin-top: auto;
+                        text-transform: uppercase;
+                        
+                        img{
+                            width: 20px;
+                        }
+
+                        div{
+                            display: flex;
+                            align-items: center;
+                            gap: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}   
